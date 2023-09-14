@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root {
+    --bs-body-color: #fff;
+    --bs-body-bg: #070320;
+    --bs-primary: #d80027;
+    --bs-primary-rgb: rgb(216, 0, 39);
+    --bs-secondary-color: #ffffff;
+    --bs-secondary-color-rgb: rgb(255, 255, 255);
+    --bs-tertiary-color: #000000;
+    --bs-tertiary-color-rgb: rgb(0, 0, 0);
+    --bs-font-sans-serif: 'Poppins';
+
+}
+
+.container-fluid{
+    --bs-gutter-x: 0;
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #d80027;
+    --bs-btn-border-color: #d80027;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #ff002f;
+    --bs-btn-hover-border-color: #ff002f;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #ff5473;
+    --bs-btn-active-border-color: #ff5473;
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #999999;
+    --bs-btn-disabled-border-color: #999999;
+}
+
+
+.section-1 {
+    background-image: url("../assets/ane-gameservices-icon-removebg-preview\ 1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 720px;
+}
+
+.txt-spe {
+    color: #E87D0E;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 155.2%;
+    /* 31.04px */
+}
+
+.btn-spe {
+    border-radius: 40px;
+    background: linear-gradient(92deg, #D80027 2.08%, #FB9E3C 117.25%);
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+span.position-relative{
+    left: 65%;
+}
+.section-5{
+    background: url("../assets/Rectangle\ 5.jpg") no-repeat;
+    background-size: cover;
+}
+.section-5 i::before{
+    color: var(--bs-primary);
+    font-size: xx-large;
+}
+/* gradian-orange: linear-gradient(92deg, #D80027 2.08%, #FB9E3C 117.25%); */
+/* gradian-blue: linear-gradient(#070320, #3B2A9F); */
+/* orange: #E87D0E; */
+
+/* .section-4 div>img{
+    width: -webkit-fill-available;
+    width: fill;
+} */
