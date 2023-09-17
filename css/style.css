@@ -1,3 +1,4 @@
+/* Text and Color */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 :root {
     --bs-body-color: #fff;
@@ -6,16 +7,89 @@
     --bs-primary-rgb: rgb(216, 0, 39);
     --bs-secondary-color: #ffffff;
     --bs-secondary-color-rgb: rgb(255, 255, 255);
-    --bs-tertiary-color: #000000;
-    --bs-tertiary-color-rgb: rgb(0, 0, 0);
+    --bs-tertiary-color: #070320;
+    --bs-tertiary-color-rgb: rgb(7, 3, 32);
     --bs-font-sans-serif: 'Poppins';
-
+}
+.txt-spe {
+    color: #E87D0E;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 155.2%;
+    /* 31.04px */
+}
+body {
+    background: linear-gradient(88deg, #070320 18.81%, #3B2A9F 199.4%);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    height: 100vh;
 }
 
-.container-fluid{
-    --bs-gutter-x: 0;
+/***************************** Animated */
+/* Hover Cards */
+.section-2 .cards a:hover {
+    position: relative;
+    display: inline-block;
+    width: 83%;
+}
+.section-6 .cards a:hover {
+    position: relative;
+    /* display: flex;
+    flex-direction: row; */
+}
+.section-2 .cards a:hover::before,
+.section-2 .cards a:hover::after, .section-6 .cards a:hover::before,
+.section-6 .cards a:hover::after {
+    content: '';
+    position: absolute;
+    border-radius: 20px;
+    left: -2px;
+    top: -3px;
+    background: linear-gradient(45deg, orange, blue);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s ease infinite;
+}
+@keyframes steam {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+.cards a:hover::after {
+    filter: blur(50px);
 }
 
+/* Gradient background */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+/* Fix border radius icon  */
+.rounded-circle {
+    overflow-clip-margin: border-box;
+}
+/* Buttons */
 .btn-primary {
     --bs-btn-color: #fff;
     --bs-btn-bg: #d80027;
@@ -30,25 +104,22 @@
     --bs-btn-disabled-bg: #999999;
     --bs-btn-disabled-border-color: #999999;
 }
-
-
-.section-1 {
-    background-image: url("../assets/ane-gameservices-icon-removebg-preview\ 1.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 720px;
+.btn-secondary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #ffffff1c;
+    --bs-btn-border-color: none;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #5c636a;
+    --bs-btn-hover-border-color: #565e64;
 }
-
-.txt-spe {
-    color: #E87D0E;
-    font-family: Poppins;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 155.2%;
-    /* 31.04px */
+.section-2 a.focus-ring:focus, .section-5 a.focus-ring:focus, .section-6 a.focus-ring:focus {
+    display: inline-block;
+    border-radius: 20px;
 }
-
+.section-4 a.focus-ring:focus {
+    display: flex;
+    border-radius: 20px;
+}
 .btn-spe {
     border-radius: 40px;
     background: linear-gradient(92deg, #D80027 2.08%, #FB9E3C 117.25%);
@@ -59,17 +130,53 @@
     font-weight: 500;
     line-height: normal;
 }
-span.position-relative{
+footer .social-icon a img {
+    height: 24px;
+    width: 24px;
+}
+/* Content */
+.bordernav-selected {
+    line-height: 14px;
+}
+
+.bordernav-selected.select1 {
+    border-bottom: 4px solid #DC7000;
+    width: 35px;
+    border-radius: 2px;
+    margin-right: 2px;
+}
+
+.bordernav-selected.select2 {
+    border-bottom: 4px solid #DC7000;
+    width: 14px;
+    border-radius: 2px;
+}
+
+.section-1 {
+    background-image: url("../assets/ane-gameservices-icon-removebg-preview-1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 720px;
+}
+
+span.position-relative {
     left: 65%;
 }
-.section-5{
+
+.section-5 {
     background: url("../assets/Rectangle\ 5.jpg") no-repeat;
     background-size: cover;
 }
-.section-5 i::before{
+
+.section-5 i::before {
     color: var(--bs-primary);
     font-size: xx-large;
 }
+
+.section-7 form input.form-control.border-black::placeholder {
+    color: #898989;
+}
+
 /* gradian-orange: linear-gradient(92deg, #D80027 2.08%, #FB9E3C 117.25%); */
 /* gradian-blue: linear-gradient(#070320, #3B2A9F); */
 /* orange: #E87D0E; */
